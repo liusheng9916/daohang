@@ -13,7 +13,7 @@ jobs:
       with:
         persist-credentials: false
     - name: Install
-      uses: sergioramos/yarn-actions/install@v11
+      uses: sergioramos/yarn-actions/install@v6
       with:
         frozen-lockfile: true
     - name: Build
