@@ -12,10 +12,15 @@ jobs:
       uses: actions/checkout@v3
       with:
         persist-credentials: false
-    - name: Install
-      uses: sergioramos/yarn-actions/install@v8
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        frozen-lockfile: true
+        node-version: '16.x' # or any other version of your choice
+    - name: Install Dependencies
+      run: yarn install # or npm install if you prefer to use npm
+    - name: Build
+      run: |
+        npm run build # or whatever command you use to build your app
     - name: Build
       run: |
         npm run build
