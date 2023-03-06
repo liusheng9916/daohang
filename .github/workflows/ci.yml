@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.6
+      uses: actions/checkout@v2.6.3
       with:
         persist-credentials: false
     - name: Install
-      uses: sergioramos/yarn-actions/install@v8
+      uses: sergioramos/yarn-actions/install@v9
       with:
         frozen-lockfile: true
     - name: Build
